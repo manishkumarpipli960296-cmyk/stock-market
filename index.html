@@ -7,6 +7,36 @@
 
   <title>Stock Market Academy | Telegram Community</title>
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1094218276837741');
+    fbq('track', 'PageView');
+
+    function trackTelegramClick() {
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'TelegramChannelClick');
+      }
+    }
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1094218276837741&ev=PageView&noscript=1"
+    alt="">
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       margin: 0;
@@ -69,7 +99,15 @@
       color: #c5cfdd;
       line-height: 1.7;
       font-size: 15px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      text-align: left;
+      color: #d5dfeb;
+      font-size: 14px;
+      line-height: 2;
+      margin: 20px 0;
     }
 
     .join-btn {
@@ -87,15 +125,6 @@
 
     .join-btn:hover {
       background: #168ac2;
-      transform: translateY(-2px);
-    }
-
-    .features {
-      text-align: left;
-      color: #d5dfeb;
-      font-size: 14px;
-      line-height: 2;
-      margin: 20px 0;
     }
 
     .note {
@@ -108,7 +137,6 @@
 </head>
 
 <body>
-
   <main class="container">
 
     <div class="logo">📈</div>
@@ -138,18 +166,18 @@
     <a
       class="join-btn"
       href="https://t.me/+shJQUbsZ6L0xNGY1"
+      onclick="trackTelegramClick()"
       target="_blank"
       rel="noopener noreferrer">
       ✈ JOIN TELEGRAM CHANNEL
     </a>
 
     <p class="note">
-      Educational purposes only. This page does not
-      guarantee profits or investment returns.
-      Securities investments are subject to market risks.
+      For educational purposes only. This is not financial
+      advice. Investments involve market risks.
+      No profits or returns are guaranteed.
     </p>
 
   </main>
-
 </body>
 </html>
